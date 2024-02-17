@@ -796,7 +796,7 @@ class ThreadController extends AbstractFOSRestController
     /**
      * Checks if a comment belongs to a thread. Returns the comment if it does.
      */
-    private function getValidCommentParent(ThreadInterface $thread, null|int|string $commentId): ?CommentInterface
+    private function getValidCommentParent(ThreadInterface $thread, $commentId): ?CommentInterface
     {
         if (null !== $commentId) {
             $comment = $this->getCommentManager()->findCommentById($commentId);
